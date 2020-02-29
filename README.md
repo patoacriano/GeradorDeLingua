@@ -1,5 +1,6 @@
 # GeradorDeLingua
-Um simples programa que gera uma lingua "nova" baseada em silabas do português
+Um simples programa que gera uma lingua "nova" baseada em silabas do português.
+[![Run on Repl.it](https://repl.it/badge/github/patoacriano/GeradorDeLingua)](https://repl.it/github/patoacriano/GeradorDeLingua)
 
 ## Para compilar o programa
   g++ main.cpp -> isso ocasionará na criação de "a.out", que será o arquivo executavel

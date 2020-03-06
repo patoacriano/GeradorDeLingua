@@ -67,7 +67,7 @@ void gerarPal(){
   string palP,palG;//palavra da pessoa e palavra gerada
   int tmnP,tmnG;
 
-  cout<<"Digite a palavra que voce deseja mudar: ";
+  cout<<"Digite a palavra que voce deseja mudar (a palavra em Portugues): ";
   cin>>palP;
   if(palP.length()>5)
     tmnP = palP.length()/2;

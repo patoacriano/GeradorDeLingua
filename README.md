@@ -3,12 +3,20 @@ Um simples programa que gera uma lingua "nova" baseada em silabas do português.
 [![Run on Repl.it](https://repl.it/badge/github/patoacriano/GeradorDeLingua)](https://repl.it/github/patoacriano/GeradorDeLingua)
 
 ## Para compilar o programa
-  g++ main.cpp -> isso ocasionará na criação de "a.out", que será o arquivo executavel
-  
-  g++ main.cpp -o nome.o -> isso ocasionará na criação de "nome.o", que será o arquivo executavel, utilize este caso deseje mudar o nome do executavel.
-  
-  "_./nome.o_" ou "_./a.out_" para executar o programa
-  
-  Lembrando que se voce for compilar o "AdicionarSilabas.cpp", basta escolher uma das opções acima e trocar o "main.cpp" por "AdicionarSilaba.cpp".
-
+    
+    ```makefile
+        make
+    ```
+    cria um executavel chamado Gerador, pode ser executado usando o comando ./Gerador
+    
+    se voce quiser traduzir um arquivo txt, pode usar ./Gerador -i \<nome do arquivo\>, por exemplo
+    
+    ./Gerador -i teste.txt
+    
+## Para adicionar mais silabas
+    
+    ```makefile
+        make adicionar
+    ```
+    cria um executavel chamado Adicionar, pode ser executado com o comando ./Adicionar
   

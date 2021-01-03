@@ -1,0 +1,17 @@
+Bom dia isso é apenas um teste
+por enquanto o programa nao suporta direito
+sinais como virgulas
+ponto
+exclamação
+e outros sinais do tipo
+pois se tivermos algo como
+Ednaldo, o grande Ednaldo Pereira
+ele irá considerar "Ednaldo," como uma palavra e Ednaldo
+como outra
+consequentemente gerando 2 traduções para a mesma palavra
+( nesse exemplo, ele geraria outra palavra para "Ednaldo," tambem )
+voce pode testar isso usando o programa escrevendo "./Gerador -i teste.txt"
+e dps dando uma olhada no teste.txtDICIONARIO.txt
+-i significa o arquivo de input, voce pode criar seu proprio arquivo como
+"TextoBonito.txt" e usar do mesmo modo → ./Gerador -i TextoBonito.txt
+divirta-se

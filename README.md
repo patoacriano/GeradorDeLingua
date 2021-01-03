@@ -1,6 +1,6 @@
 # GeradorDeLingua
 Um simples programa que gera uma lingua "nova" baseada em silabas do português.
-[![Run on Repl.it](https://repl.it/badge/github/patoacriano/GeradorDeLingua)](https://repl.it/github/patoacriano/GeradorDeLingua)
+[![Run on Repl.it](https://repl.it/badge/github/LucasPB710/GeradorDeLingua)](https://repl.it/github/LucasPB710/GeradorDeLingua)
 
 ## Para compilar o programa
 

@@ -5,7 +5,7 @@ void LerTxt::gerar(std::string input){
     //Lê arquivo linha por linha
     std::fstream inp;
     inp.open(input);
-    std::string pal;
+    std::string pal, pal2;
     if(inp.is_open()){
     while(inp >> pal){
         //adicionar cada palavra ao vetor palavrasTxt
@@ -13,10 +13,14 @@ void LerTxt::gerar(std::string input){
         //verificar se a palavra ja existe no vetor
         //se ja exisitir, nao adiciona palavras repetidas
         for(int i = 0; i<palavrasTxt.size(); i++){
+            pal2 = pal;
+            transform(pal.begin(), pal.end(), pal.begin(), ::tolower);
             if(pal == palavrasTxt[i]) contem++;
         }
-        if(contem == 0)
+        if(contem == 0){
+            transform(pal.begin(), pal.end(), pal.begin(), ::tolower);
             palavrasTxt.push_back(pal);
+        }
     }
     }
     else
@@ -74,6 +78,7 @@ void LerTxt::gerar(std::string input){
             if(!isspace(_pal[i]) && i!=_pal.length()) _pal2 += _pal[i];
             else{
                 for(long unsigned int j = 0; j<palavrasTxt.size(); j++){
+                transform(_pal2.begin(), _pal2.end(), _pal2.begin(), ::tolower);
                     if(_pal2 == palavrasTxt[j]){ id=j; _pal2 = ""; }
                 }
             }

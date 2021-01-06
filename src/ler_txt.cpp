@@ -100,8 +100,71 @@ void LerTxt::gerar(std::string input){
     std::ofstream dicionario;
     dicionario.open(input+"DICIONARIO.txt");
     for(int i = 0; i<palavrasTxt.size(); i++){
-        dicionario<<palavrasTxt[i]<<" = "<<palavrasG[i]<<"\n";
+        dicionario<<palavrasTxt[i]<<palavrasG[i]<<"\n";
     }
 
+
+}
+
+
+void LerTxt::dicionario(std::string input, std::string dic){
+
+    std::string pal;
+    int cont = 0;
+
+    std::ifstream _dic;
+    _dic.open(dic);
+    while(_dic >> pal){
+        if(cont%2==0){
+            palavrasTxt.push_back(pal);
+            std::cout<<"TXT: "<<pal<<"\n";
+        }
+        else{
+            palavrasG.push_back(pal);
+            std::cout<<"GER: "<<pal<<"\n";
+        }
+        cont++;
+    }
+
+    _dic.close();
+    //Lê o arquivo linha por linha, e substitui as palavras que existirem em palavrasTxt por palavrasG
+    std::ifstream _inp;
+    _inp.open(input);
+
+    std::ofstream save;
+    save.open(input+"TRADUZIDO.txt");
+
+    std::string _pal, _pal2;
+    while(std::getline(_inp,_pal)){
+        int id = -1;
+        //passa por palavra por palavra dessa linha
+        for(long unsigned int i = 0; i<=_pal.length(); i++){
+            if(!isspace(_pal[i]) && i!=_pal.length()) _pal2 += _pal[i];
+            else{
+                for(long unsigned int j = 0; j<palavrasTxt.size(); j++){
+                transform(_pal2.begin(), _pal2.end(), _pal2.begin(), ::tolower);
+                    if(_pal2 == palavrasTxt[j]){ id=j; _pal2 = ""; }
+                }
+            }
+            //std::cout<<_pal2<<"\n";
+            if(id != -1){
+                std::cout<<palavrasG[id]<<" ";
+                save<<palavrasG[id]<<" ";
+                id = -1;
+            }
+        }
+
+        std::cout<<"\n";
+        save<<"\n";
+        _pal2 = "";
+    }
+    _inp.close();
+    save.close();
+
+    // std::ofstream dicionario;
+    // dicionario.open(input+"DICIONARIO.txt");
+    // for(int i = 0; i<palavrasTxt.size(); i++){
+    //     dicionario<<palavrasTxt[i]<<" = "<<palavrasG[i]<<"\n";
+    // }
 
 }

@@ -55,6 +55,7 @@ int main(int argc, char** argv){
     }
     else{
         while(!salvar){
+            ger.gerar(false);
             std::cout<<"Voce deseja salvar as palavras geradas ate agora?\n[1]-sim\n[2]-nao\n> ";
             int esc;
             std::cin>>esc;

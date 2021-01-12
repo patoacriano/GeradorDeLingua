@@ -1,0 +1,3 @@
+teste Palavra1
+dicionario Palavra2
+1 bu

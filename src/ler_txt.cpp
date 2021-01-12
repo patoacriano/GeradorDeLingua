@@ -100,7 +100,7 @@ void LerTxt::gerar(std::string input){
     std::ofstream dicionario;
     dicionario.open(input+"DICIONARIO.txt");
     for(int i = 0; i<palavrasTxt.size(); i++){
-        dicionario<<palavrasTxt[i]<<palavrasG[i]<<"\n";
+        dicionario<<palavrasTxt[i]<<" "<<palavrasG[i]<<"\n";
     }
 
 

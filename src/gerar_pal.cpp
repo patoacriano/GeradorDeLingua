@@ -1,7 +1,8 @@
-#include "gerar_pal.h"
 #include <fstream>
 #include <iostream>
 #include <vector>
+
+#include "gerar_pal.h"
 
 void gerarPal::gerar(bool arquivo){
     //Pegar quantidade de linhas que silabas.txt tem.

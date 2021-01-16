@@ -23,7 +23,8 @@
 int main(int argc, char** argv){
 
     bool argumentos = false, salvar = false;
-    int op; //Decide o que vai ser feito
+    int op;
+            //Decide o que vai ser feito
             //1: lê um txt
             //2: adiciona silaba
             //3: (TODO)adiciona/salva/usa dicionario

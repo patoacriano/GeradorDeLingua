@@ -7,3 +7,7 @@ adicionar:
 
 clean:
 	rm Gerador
+
+install:
+	g++ src/*.cpp -o Gerador
+	cp Gerador ~/.local/bin/

@@ -1,7 +1,7 @@
 #include "ler_txt.h"
 #include <fstream>
 
-void LerTxt::gerar(std::string input){
+void LerTxt::gerar(std::string input, bool rew){
     //Lê arquivo linha por linha
     std::fstream inp;
     inp.open(input);
@@ -98,7 +98,10 @@ void LerTxt::gerar(std::string input){
     save.close();
 
     std::ofstream dicionario;
-    dicionario.open(input+"DICIONARIO.txt");
+    if(rew == true)
+        dicionario.open(input+"DICIONARIO.txt");
+    else
+        dicionario.open(input+"DICIONARIO.txt",std::ios::app);
     for(int i = 0; i<palavrasTxt.size(); i++){
         dicionario<<palavrasTxt[i]<<" "<<palavrasG[i]<<"\n";
     }

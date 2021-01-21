@@ -6,7 +6,7 @@
 
 class LerTxt{
 public:
-  void gerar(std::string input);
+  void gerar(std::string input, bool rew);
   void dicionario(std::string input, std::string dic);
 private:
   std::vector<std::string> palavrasTxt;
